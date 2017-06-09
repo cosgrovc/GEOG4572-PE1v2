@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.31/Build/Cesium/Widgets/CesiumWidget/CesiumWidget.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--facebook and info icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Yrsa" rel="stylesheet">
+    <style>
+        .end-background-img {
+            background: url(img/DallSheep_Mar.JPG) no-repeat center center fixed;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/storymap3d.css">
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="img/sheep_favicon.png" type="image/x-icon">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cesiumjs.org/releases/1.31/Build/Cesium/Cesium.js"></script>
+    <script src="js/storymap3d.js"></script>
+    <!--story map plugin-->
+    <title>Dall Sheep and Mountain Snow</title>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top navbar-toggleable-md" role="navigation">
+    <div class="container">
+        <!--<a class="navbar-brand" href="#"></a>-->
+        <a class="navbar-brand" href="#">
+            <img src="img/sheep_favicon.png" class="align-top" height="20px" align="left"> &nbsp; 3D Storymap
+        </a>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="javascript:window.scrollBy(0, $('section[data-scene=overview]').offset().top - $(window).scrollTop() - 40);">Home</a>
+                </li>
+                <li>
+                    <a href="javascript:window.scrollBy(0, $('section[data-scene=scene1]').offset().top - $(window).scrollTop() - 40);">Dall Sheep</a>
+                </li>
+                <li>
+                    <a href="javascript:window.scrollBy(0, $('section[data-scene=scene2]').offset().top - $(window).scrollTop() - 40);">Wrangell St Elias</a>
+                </li>
+                <li>
+                    <a href="javascript:window.scrollBy(0, $('section[data-scene=scene3]').offset().top - $(window).scrollTop() - 40);">September2016</a>
+                </li>
+                <li>
+                    <a href="javascript:window.scrollBy(0, $('section[data-scene=scene4]').offset().top - $(window).scrollTop() - 40);">March2017</a>
+                </li>
+                <li>
+                    <a href="javascript:window.scrollBy(0, $('section[data-scene=end]').offset().top - $(window).scrollTop() - 40);">End</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 main">
+            <section data-scene="overview">
+                <video class="background-fullscreen-setting" playsinline autoplay muted loop>
+                    <source src="img/NP_Dall_Sheep_Video.mp4" type="video/mp4">
+                </video>
+                <div class= "background-fullscreen-setting text-responsive text-center" >
+                    <h3>Alaskan Mountain Sheep and 21st Century Snow</h3>
+                    <h3><small style="color: rgba(255, 255, 255, 1)">This storymap presents my research and fieldwork as part of the NASA Arctic Boreal Vulnerability Experiment (ABoVE) project "Assessing Alpine Ecosystem Vulnerability to Environmental Change Using Dall Sheep as an Iconic Indicator Species"</small></h3>
+                    <p style="padding-top: 1000px"> Video Credit: <a>https://www.youtube.com/watch?v=KFdOjV2EQyE</a> </p>
+                </div>
+            </section>
+
+            <section data-scene="scene1">
+                <h2>Dall Sheep and their ranges</h2>
+                <p>Dall Sheep inhabit mountainous ranges of Northwestern Canada and Alaska. They are wild sheep and rely on alpine meadows for their forage, which varies according to summer to winter. Summer vegetation is abundant and a wide range of food sources are used by the sheep. However, in winter food is scarce and the sheep rely on windy, bare ridges where frozen grasses and sedge stems can be found with a little bit of scrabbling through the snow. Climate change though is challenging this food source. Warming events melt the snowpack and then refreeze, leaving ice layers that stop the sheep from accessing their food. My project uses a combintaion of a spatially explicity snow-evolution model, remote-sensing imagery and field observations to help us understand where these events happened historically, how they affected the success of the sheep, and how vulnerable they may be as a species in future decades. Below I will show some of the fieldwork we've already done in the Wrangell St Elias...  </p><br/>
+                <div class="legend"><i style="background: #F0F8FF"></i></div> <p> Dall Sheep Ranges </p>
+            </section>
+
+            <section data-scene="scene2">
+                <h2>Wrangell St Elias National Park</h2>
+                <p>Our field work takes place in the Wrangell St Elias National Park - the US's largest national park at 13.2 million acres. We can't cover all that ground though, so we focus on taking measurements in one park unit, Jacksina Creek. </p><br/>
+                <div class="legend"><i style="background: #BDB76B"></i></div> <p> Wrangell St Elias NP </p>
+                <div class="legend"><i style="background: #FFD700"></i></div> <p> Sheep Survey Units </p>
+                <div class="legend"><i style="background: #DAA520"></i></div> <p> Jacksina Creek </p>
+            </section>
+
+            <section data-scene="scene3">
+                <h2>September 2016 Fieldwork</h2>
+                <p>In September 2016 we set out 22 Reconyx PC900 cameras pointing at a marked snow stake in locations on Jaeger Mesa and near Nabesna Village. The cameras (see photo below) take a photo every 1hr throughout the winter, showing the evolution of snowdepth up and down the stake in front of them and take the odd snap of Dall Sheep nearby. The locations for the cameras were chosen to best represent the different altitudes, aspects, slope angles and vegetation present in the area.</p>
+                <img src="img/IMG_0102.jpg" class="img-responsive" alt="responsive image" alt-text="Camera looking at a snow stake and Professor Anne Nolin!">
+            </section>
+
+            <section data-scene="scene4">
+                <h2>March 2017 Fieldwork</h2>
+                <p>After a winter of freezing temperatures and some snow we returned to the Wrangells to collect the memory cards from the cameras and conduct snow surveys nearby. March is generally the month in which the peak amount of snow is seen in the year and its just before when the Dall Sheep begin to lamb; a critical period for them to be able to forage. We employed a number of methods to measure the snowpack; depth was taken by a combination of Magnaprobe and manual measurements along transects and spirals, density measurements and analysis of stratigraphy were taken at snowpits dug nearby each camera. </p></br>
+                <p>Here the orange points are snow depth measurements taken by a Magnaprobe</p>
+            </section>
+
+            <section data-scene="end">
+                <div class= "end-background-img background-fullscreen-setting text-center" >
+                    <br/>
+                    <h3 class="">Thanks for watching!!!</h3>
+                    <h3><small style="color: rgba(169, 169, 169, 0.8)">Download Storymap.js from http://github.com/jakobzhao/storymap</small></h3>
+                </div>
+            </section>
+        </div>
+        <div id="map" class="col-sm-6 col-md-8 sidebar"></div>
+    </div>
+    <!--add a scrolling down arrow-->
+    <div class="animated zoomIn infinite glyphicon glyphicon-menu-down arrow-down"></div>
+    <!--add a navigation bar-->
+    <div class="navwidget text-center"></div>
+    <!--add a progress line-->
+    <div class="progress-line"></div>
+    <!--add loading page -->
+    <div class="glyphicon glyphicon-refresh loader"></div>
+
+
+</div>
+<script>
+     //Set function for color ramp
+    function setColor(density){
+        return density > 40 ? '#bd0026' :
+            density > 30 ?  '#f03b20' :
+                density > 20 ?  '#fd8d3c' :
+                    density > 10 ?  '#fecc5c' :
+                        '#ffffb2' ;
+    }
+    var layer1 = new Cesium.GeoJsonDataSource();
+    layer1.load('assets/Magnaprobe_points.geojson', {clampToGround : true}).then(
+        function(dataSource) {
+            var entities = dataSource.entities.values;
+
+            for (var i = 0; i < entities.length; i++) {
+                var entity = entities[i];
+                entity.billboard = undefined;
+                entity.point = new Cesium.PointGraphics({
+                    color: Cesium.Color.CHOCOLATE,
+                    pixelSize: 5
+                });
+            }
+            viewer.dataSources.add(dataSource);
+            viewer.zoomTo(dataSource);
+        }
+    );
+    var layer2 = new Cesium.GeoJsonDataSource();
+    layer2.load('assets/Dall_Ranges2.geojson', {
+        fill: Cesium.Color.ALICEBLUE.withAlpha(0.5),
+        stroke: Cesium.Color.WHITE.withAlpha(0),
+        clampToGround : false
+    }
+    );
+
+
+    var layer3 = new Cesium.MapboxImageryProvider({
+        mapId : 'mapbox.dark',
+        accessToken : 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpenh0dG41ZjAyY3gzMXFsdTJqbm5oNmwifQ.ucAGT19EfvxX2EUaHUwAxA'
+    });
+    var layer4 =  new Cesium.UrlTemplateImageryProvider({
+        url : 'http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2X.png'
+    });
+
+     var layer5 = new Cesium.GeoJsonDataSource();
+
+     layer5.load('assets/Camera_locations.geojson', {
+         clampToGround : true,
+         markerColor : Cesium.Color.CORNFLOWERBLUE,
+         markerType : 'camera'
+     });
+
+     var layer6 = new Cesium.GeoJsonDataSource();
+     layer6.load('assets/manual_transects.geojson', {
+         fill: new Cesium.Color(0, 1, 0, 0),
+         clampToGround : true
+     });
+     var layer7 = new Cesium.GeoJsonDataSource();
+     layer7.load('assets/Wrangell_St_Elias_NP.geojson', {
+         fill: Cesium.Color.DARKKHAKI.withAlpha(0.5),
+         clampToGround : true
+     });
+     var layer8 = new Cesium.GeoJsonDataSource();
+     layer8.load('assets/Sheep_Survey_Units.geojson', {
+         stroke: Cesium.Color.GOLD,
+         fill: Cesium.Color.GOLD.withAlpha(0.5),
+         clampToGround : true
+     }).then(
+         function(dataSource) {
+         var p = dataSource.entities.values;
+         for (var i = 0; i < p.length; i++) {
+             p[i].polygon.extrudedHeight = 15; // or height property
+         }
+         viewer.dataSources.add(dataSource);
+         viewer.zoomTo(dataSource);
+         }
+     );
+
+     var layer9 = new Cesium.GeoJsonDataSource();
+     layer9.load('assets/Jacksina.geojson', {
+         fill: Cesium.Color.GOLDENROD.withAlpha(0.5),
+         clampToGround : true
+     }).then(
+         function(dataSource) {
+             var p = dataSource.entities.values;
+             for (var i = 0; i < p.length; i++) {
+                 p[i].polygon.extrudedHeight = 50; // or height property
+             }
+             viewer.dataSources.add(dataSource);
+             viewer.zoomTo(dataSource);
+         }
+     );
+
+    var layers = {
+        'layer1': [layer1],
+        'layer2': [layer2],
+        'layer3': [layer3],
+        'layer4': [layer4],
+        'layer5': [layer5],
+        'layer6': [layer6],
+        'layer7': [layer7],
+        'layer8': [layer8],
+        'layer9': [layer9]
+    };
+    var scenes = {
+        overview: {lat: 60, lng: -143, zoom: 10, mode: 3, layers: [], position: "fullpage"},
+        scene1: {lat: 60, lng: -143, zoom: 7, mode: 3, layers: ['layer2']},
+        scene2: {lat: 65, lng: -154, mode: 3, zoom: 3, layers: ['layer7', 'layer8','layer9']},
+        scene3: {lat: 65, lng: -154, mode: 3, zoom: 3, layers: ['layer5']},
+        scene4: {lat: 65, lng: -154, mode: 2, zoom: 11, layers: ['layer1']},
+        end: {lat: 65, lng: -154, zoom: 7, mode: 3, layers: [], position: "fullpage"}
+    };
+    $('.main').storymap({
+        scenes: scenes,
+        layers: layers,
+        navwidget: true,
+        createMap: function () {
+            var map = new Cesium.Viewer('map', {
+                terrainProvider : new Cesium.CesiumTerrainProvider({
+                    url : 'https://assets.agi.com/stk-terrain/world',
+                    requestWaterMask: false,
+                    requestVertexNormals: false
+                }),
+                imageryProvider :  new Cesium.ArcGisMapServerImageryProvider({
+                    url :  'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer'
+                }),
+                vrButton: false,  // virtual reality support
+                infoBox: false, // pick a feature and show its attributes
+                sceneModePicker: false, // 2d, 2.5d and 3d
+                navigationHelpButton: false,
+                baseLayerPicker : false,
+                fullscreenButton: false,
+                geocoder: false,
+                selectionIndicator: false,
+                homeButton: false,
+                animation: false,
+                timeline: false
+            });
+            map.scene.skyAtmosphere.show = true;
+            // hide the credit banner, however credit the map libraries or data somewhere else.
+            document.getElementsByClassName("cesium-widget-credits")[0].style.visibility = "hidden";
+            return map;
+        }
+    });
+</script>
+</body>
+</html>
